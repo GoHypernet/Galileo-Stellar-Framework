@@ -87,7 +87,7 @@
         "title": "Your API Endpoints",
         "content": [
             {
-            "title": "🏃‍♂️ Relay URL",
+            "title": "☁ PEER PORT URL",
             "href": "/",
             "priority": 0
             }

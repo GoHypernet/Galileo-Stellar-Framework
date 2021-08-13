@@ -1,58 +1,47 @@
 {
     "tasks": [
         {
+            "id": "initialize-stellar-db",
+            "label": "Initialize Stellar Database",
+            "description": "Create a database for fast ledger access.",
+            "type": "shell",
+            "command": "stellar-core new-db --conf /home/galileo/stellar-core.cfg",
+            "icon": {
+                "prefix": "fas",
+                "name": "plus"
+            }
+        },
+		{
             "id": "start-stellar-node",
             "label": "Start Stellar Node",
-            "description": "Start the Algorand Relay node in the backgournd.",
+            "description": "Start the Stellar Core protocol process.",
             "type": "shell",
-            "command": "/home/galileo/goal node start",
+            "command": "tmux new -s core stellar-core run --conf /home/galileo/stellar-core.cfg || tmux a -t core",
             "icon": {
                 "prefix": "far",
                 "name": "play-circle"
             }
         },
 		{
-            "id": "algorand-node-update",
-            "label": "Upgrade Node",
-            "description": "Check for upgrades and apply them if necessary.",
-            "type": "shell",
-            "command": "bash /home/galileo/update.sh -d /home/galileo/data",
-            "icon": {
-                "prefix": "fas",
-                "name": "sync"
-            }
-        },
-		{
-            "id": "algorand-node-status",
+            "id": "stellar-node-status",
             "label": "Get Node Status",
-            "description": "Check on the status of your Algorand node.",
+            "description": "Check on the status of your Stellar node.",
             "type": "shell",
-            "command": "/home/galileo/goal node status -w 1000",
+            "command": "stellar-core http-command info --conf /home/galileo/stellar-core.cfg",
             "icon": {
                 "prefix": "fas",
                 "name": "info-circle"
             }
         },
         {
-            "id": "stop-algorand-node",
-            "label": "Stop Relay Node",
-            "description": "Stop the Algorand Relay node.",
+            "id": "stop-stellar-node",
+            "label": "Stop Stellar Node",
+            "description": "Stop the Stellar Protocol process.",
             "type": "shell",
-            "command": "/home/galileo/goal node stop",
+            "command": "tmux kill-session -t core",
             "icon": {
                 "prefix": "far",
                 "name": "stop-circle"
-            }
-        },
-		{
-            "id": "algorand-carpenter",
-            "label": "Carpenter Tool",
-            "description": "Protocol visualization tool.",
-            "type": "shell",
-            "command": "/home/galileo/carpenter -D",
-            "icon": {
-                "prefix": "fas",
-                "name": "search-location"
             }
         },
 		{

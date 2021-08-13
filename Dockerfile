@@ -29,7 +29,9 @@ RUN go get -u github.com/bitnami/bcrypt-cli
 
 # add galileo non-root user
 RUN useradd -ms /bin/bash galileo
-COPY .theia /home/galileo/.theia
+
+COPY --chown=galileo .theia /home/galileo/.theia
+COPY --chown=galileo .vscode /home/galileo/.vscode
 
 # get the stellar config/rclone/rclone
 COPY --chown=galileo stellar-core.cfg /home/galileo/stellar-core.cfg
