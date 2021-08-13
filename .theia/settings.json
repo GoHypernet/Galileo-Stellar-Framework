@@ -1,0 +1,98 @@
+{
+    "galileo.logo": "https://cryptologos.cc/logos/stellar-xlm-logo.png?v=013",
+    "galileo.title": "Stellar",
+    "galileo.description": "Stellar is an open network for storing and moving money.",
+    "galileo.widget_label": "Stellar Portal",
+    "galileo.social_links": [
+        {
+        "icon": {
+            "prefix": "fab",
+            "name": "twitter"
+        },
+        "href": "https://twitter.com/stellarorg",
+        "priority": 0
+        },
+		{
+        "icon": {
+            "prefix": "fab",
+            "name": "linkedin"
+        },
+        "href": "https://www.linkedin.com/company/stellar-development-foundation/",
+        "priority": 1
+        },
+        {
+        "icon": {
+            "prefix": "fab",
+            "name": "reddit"
+        },
+        "href": "https://www.reddit.com/r/Stellar/",
+        "priority": 2
+        }
+    ],
+    "galileo.ui_components": [
+        {
+        "type": "custom",
+        "title": "Getting Started",
+        "content": [
+            {
+            "title": "🏡 Stellar Home Page",
+            "href": "https://www.stellar.org/",
+            "priority": 0
+            },
+            {
+            "title": "🔭 Stellar Network Explorer",
+            "href": "https://stellarbeat.io/",
+            "priority": 1
+            },
+            {
+            "title": "🤓 Developer Resources",
+            "href": "https://developers.stellar.org/",
+            "priority": 3
+            },
+            {
+            "title": "📙 Stellar Node Guide",
+            "href": "https://developers.stellar.org/docs/run-core-node/",
+            "priority": 3
+            }
+        ]
+        },
+        {
+        "type": "custom",
+        "title": "Help",
+        "content": [
+            {
+            "title": "🤔 Stellar FAQ",
+            "href": "https://www.stellar.org/community/faq",
+            "priority": 0
+            },
+            {
+            "title": "📧 Contact Stellar",
+            "href": "https://www.stellar.org/contact",
+            "priority": 1
+            },
+			{
+            "title": "🕵️‍♂️ Find a Transaction",
+            "href": "https://stellar.expert/explorer/public",
+            "priority": 2
+            }
+			{
+            "title": "🔭 Galileo Environment Tutorial",
+            "href": "https://galileo-tutorial-pages.readthedocs.io/en/latest/docs/stellar.html",
+            "priority": 4
+            }
+        ]
+        },
+		{
+        "type": "custom",
+        "title": "Your API Endpoints",
+        "content": [
+            {
+            "title": "🏃‍♂️ Relay URL",
+            "href": "/",
+            "priority": 0
+            }
+        ]
+        }
+    ],
+    "workbench.colorTheme": "Galileo Dark"
+}
